@@ -45,7 +45,7 @@ class Jugadores extends CI_Controller {
 
 		// inicio del proceso d guardado de fotografia
 		$this->load->library("upload"); //activando libreria de subida de archivos
-    	$new_name = "fotO_" . time() . "_" . rand(1, 5000);//generanado un nombre aleatorio
+    	$new_name = "foto_" . time() . "_" . rand(1, 5000);//generanado un nombre aleatorio
     	$config['file_name'] = $new_name;
     	$config['upload_path'] = FCPATH . 'uploads/equipos'; //ruta donde vamos a subir el archivo
     	$config['allowed_types'] = 'jpg|png'; //tipo de archivos permitidos  'pdf|word'
@@ -78,7 +78,7 @@ class Jugadores extends CI_Controller {
 	
 	}
 	public function actualizar($id){
-		$data["jugadorEditar"]=$this->jugador-->obtenerPorId($id);
+		$data["jugadorEditar"]=$this->jugador->obtenerPorId($id);
 		$this->load->view("header");
 		$this->load->view("jugadores/actualizar",$data);
 		$this->load->view("footer");

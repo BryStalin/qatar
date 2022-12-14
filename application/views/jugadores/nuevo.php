@@ -1,25 +1,65 @@
 
 <legend class="text-center">
 <i class="glyphicon glyphicon-plus"></i>
-  <b>Nuevo Equipo</b>
+  <b>Nuevo Jugador</b>
 </legend>
-<form id="frm_nuevo_equipo" class="" enctype="multipart/form-data" action="<?php echo site_url('equipos/guardarEquipos'); ?> " method="post">
+<form id="frm_nuevo_jugador" class="" enctype="multipart/form-data" action="<?php echo site_url('jugadores/guardarJugadores'); ?> " method="post">
   <div class="row">
     <div class="col-md-4 text-right">
-      <label for="">EQUIPO</label>
+      <label for="">NOMBRE</label>
     </div>
     <div class="col-md-7">
-      <input type="text" id="nombre_equi" name="nombre_equi" value=""class="form-control" placeholder="Ingrese Equipo" >
+      <input type="text" id="nombre_jug" name="nombre_jug" value=""class="form-control" placeholder="Ingrese el nombre del jugador" >
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col-md-4 text-right">
-      <label for="">CONFEDERACION</label>
+      <label for="">APELLIDO</label>
 
     </div>
     <div class="col-md-7">
-      <input type="text" id="confederacion_equi" name="confederacion_equi" value=""class="form-control" placeholder="Ingrese la confederacion" >
+      <input type="text" id="apellido_jug" name="apellido_jug" value=""class="form-control" placeholder="Ingrese el apellido" >
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4 text-right">
+      <label for="">EDAD</label>
+
+    </div>
+    <div class="col-md-7">
+      <input type="number" id="edad_jug" name="edad_jug" value=""class="form-control" placeholder="Ingrese la edad" >
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4 text-right">
+      <label for="">CLUB</label>
+
+    </div>
+    <div class="col-md-7">
+      <input type="text" id="club_jug" name="club_jug" value=""class="form-control" placeholder="Ingrese el club" >
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4 text-right">
+      <label for="">POSICION</label>
+
+    </div>
+    <div class="col-md-7">
+      <input type="text" id="posicion_jug" name="posicion_jug" value=""class="form-control" placeholder="Ingrese la posicion del jugador" >
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4 text-right">
+      <label for="">NUMERO</label>
+
+    </div>
+    <div class="col-md-7">
+      <input type="number" id="numero_jug" name="numero_jug" value=""class="form-control" placeholder="Ingrese el numero del jugador" >
     </div>
   </div>
   <br>
@@ -29,7 +69,7 @@
 
       </div>
       <div class="col-md-7">
-        <input type="file" id="imagen_equi" name="imagen_equi" value=""class="form-control" placeholder="Seleccione la fotografia" required accept="image/*">
+        <input type="file" id="foto_jug" name="foto_jug" value=""class="form-control" placeholder="Seleccione la fotografia" required accept="image/*">
       </div>
     </div>
 
@@ -46,7 +86,7 @@
           <i class="glyphicon glyphicon-ok"></i>
           Guardar
         </button>
-        <a href="<?php echo site_url('equipos/index'); ?> " class="btn btn-danger">
+        <a href="<?php echo site_url('jugadores/index'); ?> " class="btn btn-danger">
           <i class="glyphicon glyphicon-remove"></i>
           Cancelar
         </a>
@@ -55,28 +95,28 @@
 </form>
 
 <script type="text/javascript">
-     $("#frm_nuevo_equipo").validate({
+     $("#frm_nuevo_jugador").validate({
         rules:{
-            nombre_equi:{
+            nombre_jug:{
               required:true,
               minlength:3
             },
             
-            confederacion_equi:{
+            apellido_jug:{
               required:true,
               minlength:3
             },
           
         },
         messages:{
-            nombre_equi:{
-              required:"Por favor ingresse el equipo",
-              minlength:"Equipo Incorrecto"
+            nombre_jug:{
+              required:"Por favor ingrese el nombre",
+              minlength:"Nombre Incorrecto"
             },
          
-            confederacion_equi:{
-              required:"Por favor ingrese la confederacion",
-              minlength:"Confederacion incorrecta"
+            apellido_jug:{
+              required:"Por favor ingreseel apellido",
+              minlength:"Apellido incorrecta"
             },
            
         },
