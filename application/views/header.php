@@ -124,8 +124,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ESTADIOS <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<?php echo site_url('asignaturas/index'); ?>">Listado</a></li>
-            <li><a href="<?php echo site_url('asignaturas/nuevo'); ?>">Nuevo</a></li>
+            <li><a href="<?php echo site_url('estadios/index'); ?>">Listado</a></li>
+            <li><a href="<?php echo site_url('estadios/nuevo'); ?>">Nuevo</a></li>
           </ul>
         </li>
         
