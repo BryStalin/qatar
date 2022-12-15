@@ -31,8 +31,8 @@ class Estadios extends CI_Controller {
 	//funcion para capturar los valores del formulario nuevo
 	public function guardarEstadios(){
 		$datosNuevoEstadio=array(
-			"nombre_est" =>$this->input->post('nombre_est'),
-			"capacidad_est" =>$this->input->post('capacidad_est'),
+			"nombre_est_be" =>$this->input->post('nombre_est_be'),
+			"capacidad_est_be" =>$this->input->post('capacidad_est_be'),
 
 
 
@@ -46,10 +46,10 @@ class Estadios extends CI_Controller {
     	$config['allowed_types'] = 'jpg|png'; //tipo de archivos permitidos  'pdf|word'
 		$config['max_size'] = 2 * 1024; //tamano de la imagen 5mb
     	$this->upload->initialize($config);
-    	if ($this->upload->do_upload("foto_jug")) {
+    	if ($this->upload->do_upload("foto_jug_be")) {
 			//que se suba con exito
       	$dataSubida = $this->upload->data();
-		$datosNuevoEstadio["foto_jug"] = $dataSubida['file_name'];
+		$datosNuevoEstadio["foto_jug_be"] = $dataSubida['file_name_be'];
     }
 
 
@@ -63,9 +63,9 @@ class Estadios extends CI_Controller {
 		}
 	}
 	//funcion para eliminar estudiantes
-	public function borrar($id_est){
+	public function borrar($id_est_be){
 
-	if ($this->estadio->eliminarPorId($id_est)) {
+	if ($this->estadio->eliminarPorId($id_est_be)) {
 		redirect('estadios/index');
 	} else {
 		echo "Error al eliminar";
@@ -83,13 +83,13 @@ class Estadios extends CI_Controller {
 
 	public function procesarActualizacion(){
 		$datosEstadiosEditado=array(
-			"nombre_est" =>$this->input->post('nombre_est'),
-			"capacidad_est" =>$this->input->post('capacidad_est'),
+			"nombre_est_be" =>$this->input->post('nombre_est_be'),
+			"capacidad_est_be" =>$this->input->post('capacidad_est_be'),
 
 
 		);
 
-		$id=$this->input->post("id_est");
+		$id=$this->input->post("id_est_be");
 		if($this->estadio->actualizar($id,$datosEstadiosEditado)){
 			redirect('estadios/index');
 		}else{
@@ -98,7 +98,7 @@ class Estadios extends CI_Controller {
 		}
 	}
 
-
+//cambios
 
 
 
