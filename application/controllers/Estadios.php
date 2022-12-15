@@ -59,20 +59,22 @@ class Estadios extends CI_Controller {
 
 		print_r($datosNuevoEstadio);
 		if($this->estadio->insertar($datosNuevoEstadio)){
-			redirect('estadios/index');
+			$this->session->set_flashdata('confirmacion', 'Estadio Insertado');
 		}else{
-			echo "<h1>ERROR</h1>";
+			$this->session->set_flashdata('error', 'Error al insertar Estadio');
 
 		}
+		redirect('estadios/index');
 	}
 	//funcion para eliminar estudiantes
 	public function borrar($id_est_be){
 
 	if ($this->estadio->eliminarPorId($id_est_be)) {
-		redirect('estadios/index');
+		$this->session->set_flashdata('confirmacion', 'Estadio borrado');
 	} else {
-		echo "Error al eliminar";
+		$this->session->set_flashdata('error', 'Error al eliminar Estadio');
 	}
+	redirect('estadios/index');
 	
 	}
 	public function actualizar($id){

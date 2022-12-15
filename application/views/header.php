@@ -43,8 +43,45 @@
      <!-- Importación de DataTables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-</head>
-<!-- Pegar debajo del body -->
+
+    <!-- Importación de SWEET aALERT -->
+
+    <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.15/sweetalert2.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.15/sweetalert2.js"></script>
+
+
+
+
+  </head>
+
+  <?php if ($this->session->flashdata('confirmacion')): ?>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          Swal.fire(
+            'CONFIRMACIÓN', //titulo
+            '<?php echo $this->session->flashdata('confirmacion'); ?>', //Contenido o mensaje
+            'success' //Tipo de alerta
+          )
+        });
+      </script>
+<?php endif; ?>
+
+
+<?php if ($this->session->flashdata('error')): ?>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          Swal.fire(
+            'ERROR', //titulo
+            '<?php echo $this->session->flashdata('error'); ?>', //Contenido o mensaje
+            'error' //Tipo de alerta
+          )
+        });
+      </script>
+<?php endif;?>
+
+
+
+
 
 <body>
 

@@ -56,7 +56,7 @@
                         <i class="glyphicon glyphicon-edit"></i>
                         Editar
                     </a>
-                    <a href="<?php echo site_url('equipos/borrar')?>/<?php echo $equipoTemporal->id_equipos_be; ?>" class="btn btn-danger" onclick="return confirm ('Estas seguro de que quieres eliminar')">
+                    <a href="<?php echo site_url('equipos/borrar')?>/<?php echo $equipoTemporal->id_equipos_be; ?>" class="btn btn-danger">
                         <i class="glyphicon glyphicon-trash"></i>
                         Eliminar
                     </a>

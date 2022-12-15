@@ -37,24 +37,27 @@ public function guardarAsignatura(){
 		
 		
 	);
-	
+	print_r($datos);
 	if($this->grupo->insertar($datos)){
-		redirect('grupos/index');
+		$this->session->set_flashdata('confirmacion', 'Grupo Insertado');
 	}else{
-		echo "<h1>ERROR</h1>";
+		$this->session->set_flashdata('error', 'Error al insertar grupo');
 
 	}
+	redirect('grupos/index');
 
  }
  public function borrar($id_grupo_be){
 
 	if ($this->grupo->eliminarPorId($id_grupo_be)) {
-		redirect('grupos/index');
+		$this->session->set_flashdata('confirmacion', 'Grupo borrado');
 	} else {
-		echo "Error al eliminar";
+		$this->session->set_flashdata('error', 'Error al eliminar grupo');
 	}
+	redirect('grupos/index');
 	
 	}
+	
 
 	public function actualizar($id){
 		$data["estudianteEditar"]=$this->grupo->obtenerPorId($id);

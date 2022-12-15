@@ -56,20 +56,22 @@ class Equipos extends CI_Controller {
 
 		print_r($datosNuevoEquipo);
 		if($this->equipo->insertar($datosNuevoEquipo)){
-			redirect('equipos/index');
+			$this->session->set_flashdata('confirmacion', 'Equipo Insertado');
 		}else{
-			echo "<h1>ERROR</h1>";
+			$this->session->set_flashdata('error', 'Error al insertar equipo');
 
 		}
+		redirect('equipos/index');
 	}
 	//funcion para eliminar estudiantes
 	public function borrar($id_equipos_be){
 
 	if ($this->equipo->eliminarPorId($id_equipos_be)) {
-		redirect('equipos/index');
+		$this->session->set_flashdata('confirmacion', 'Equipo borrado');
 	} else {
-		echo "Error al eliminar";
+		$this->session->set_flashdata('error', 'Error al eliminar equipo');
 	}
+	redirect('equipos/index');
 	
 	}
 	public function actualizar($id){

@@ -8,7 +8,7 @@
       <label for="">GRUPO</label>
     </div>
     <div class="col-md-7">
-      <input type="text" name="nombre_be"  value="" class="form-control" placeholder="Ingrese el nombre del grupo " required>
+      <input type="text" name="nombre_be" id="nombre_be" value="" class="form-control" placeholder="Ingrese el nombre del grupo " >
     </div>
   </div>
   <br>
@@ -18,7 +18,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais1_be" value="" class="form-control" placeholder="Ingrese el pais" requered>
+    <input type="text" name="pais1_be" id="pais1_be" value="" class="form-control" placeholder="Ingrese el pais" >
   </div>
 </div>
 <br>
@@ -28,7 +28,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais2_be" value="" class="form-control" placeholder="Ingrese el pais" requered>
+    <input type="text" name="pais2_be" id="pais2_be" value="" class="form-control" placeholder="Ingrese el pais" >
   </div>
 </div>
 <br>
@@ -38,7 +38,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais3_be" value="" class="form-control" placeholder="Ingrese el pais" requered>
+    <input type="text" name="pais3_be"  id="pais3_be" value="" class="form-control" placeholder="Ingrese el pais" >
   </div>
 </div>
 <br>
@@ -47,7 +47,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais4_be" value="" class="form-control" placeholder="Ingrese el pais" requered>
+    <input type="text" name="pais4_be" id="pais4_be" value="" class="form-control" placeholder="Ingrese el pais" >
   </div>
 </div>
 <br>
@@ -79,6 +79,18 @@
               required:true,
               minlength:3
             },
+            pais2_be:{
+              required:true,
+              minlength:3
+            },
+            pais3_be:{
+              required:true,
+              minlength:3
+            },
+            pais4_be:{
+              required:true,
+              minlength:3
+            },
           
         },
         messages:{
@@ -91,6 +103,20 @@
               required:"Por favor ingrese pais",
               minlength:"Nombre Incorrect"
             },
+            pais2_be:{
+              required:"Por favor ingrese pais",
+              minlength:"Nombre Incorrect"
+            },
+            pais3_be:{
+              required:"Por favor ingrese pais",
+              minlength:"Nombre Incorrect"
+            },
+            pais4_be:{
+              required:"Por favor ingrese pais",
+              minlength:"Nombre Incorrect"
+            },
+  
+
            
         },
   });

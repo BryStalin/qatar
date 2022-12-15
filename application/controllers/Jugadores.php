@@ -61,20 +61,25 @@ class Jugadores extends CI_Controller {
 
 		print_r($datosNuevoJugador);
 		if($this->jugador->insertar($datosNuevoJugador)){
-			redirect('jugadores/index');
+			$this->session->set_flashdata('confirmacion', 'Jugador Insertado');
 		}else{
-			echo "<h1>ERROR</h1>";
+			$this->session->set_flashdata('error', 'Error al insertar jugador');
 
 		}
+		redirect('jugadores/index');
 	}
 	//funcion para eliminar estudiantes
 	public function borrar($id_jug_be){
 
 	if ($this->jugador->eliminarPorId($id_jug_be)) {
-		redirect('jugadores/index');
+		$this->session->set_flashdata('confirmacion', 'Jugador borrado');
 	} else {
-		echo "Error al eliminar";
+		$this->session->set_flashdata('error', 'Error al borrar Jugadores');
+	
+	
+		
 	}
+	redirect('jugadores/index');
 	
 	}
 	public function actualizar($id){
