@@ -31,12 +31,12 @@ class Jugadores extends CI_Controller {
 	//funcion para capturar los valores del formulario nuevo
 	public function guardarJugadores(){
 		$datosNuevoJugador=array(
-			"nombre_jug" =>$this->input->post('nombre_jug'),
-			"apellido_jug" =>$this->input->post('apellido_jug'),
-            "edad_jug" =>$this->input->post('edad_jug'),
-			"club_jug" =>$this->input->post('club_jug'),
-            "posicion_jug" =>$this->input->post('posicion_jug'),
-			"numero_jug" =>$this->input->post('numero_jug'),
+			"nombre_jug_be" =>$this->input->post('nombre_jug_be'),
+			"apellido_jug_be" =>$this->input->post('apellido_jug_be'),
+            "edad_jug_be" =>$this->input->post('edad_jug_be'),
+			"club_jug_be" =>$this->input->post('club_jug_be'),
+            "posicion_jug_be" =>$this->input->post('posicion_jug_be'),
+			"numero_jug_be" =>$this->input->post('numero_jug_be'),
 
 
 
@@ -50,10 +50,10 @@ class Jugadores extends CI_Controller {
     	$config['allowed_types'] = 'jpg|png'; //tipo de archivos permitidos  'pdf|word'
 		$config['max_size'] = 2 * 1024; //tamano de la imagen 5mb
     	$this->upload->initialize($config);
-    	if ($this->upload->do_upload("foto_jug")) {
+    	if ($this->upload->do_upload("foto_jug_be")) {
 			//que se suba con exito
       	$dataSubida = $this->upload->data();
-		$datosNuevoJugador["foto_jug"] = $dataSubida['file_name'];
+		$datosNuevoJugador["foto_jug_be"] = $dataSubida['file_name_be'];
     }
 
 
@@ -67,9 +67,9 @@ class Jugadores extends CI_Controller {
 		}
 	}
 	//funcion para eliminar estudiantes
-	public function borrar($id_jug){
+	public function borrar($id_jug_be){
 
-	if ($this->jugador->eliminarPorId($id_jug)) {
+	if ($this->jugador->eliminarPorId($id_jug_be)) {
 		redirect('jugadores/index');
 	} else {
 		echo "Error al eliminar";
@@ -87,17 +87,17 @@ class Jugadores extends CI_Controller {
 
 	public function procesarActualizacion(){
 		$datosJugadoresEditado=array(
-			"nombre_jug" =>$this->input->post('nombre_jug'),
-			"apellido_jug" =>$this->input->post('apellido_jug'),
-            "edad_jug" =>$this->input->post('edad_jug'),
-			"club_jug" =>$this->input->post('club_jug'),
-            "posicion_jug" =>$this->input->post('posicion_jug'),
-			"numero_jug" =>$this->input->post('numero_jug'),
+			"nombre_jug_be" =>$this->input->post('nombre_jug_be'),
+			"apellido_jug_be" =>$this->input->post('apellido_jug_be'),
+            "edad_jug_be" =>$this->input->post('edad_jug_be'),
+			"club_jug_be" =>$this->input->post('club_jug_be'),
+            "posicion_jug_be" =>$this->input->post('posicion_jug_be'),
+			"numero_jug_be" =>$this->input->post('numero_jug_be'),
 
 
 		);
 
-		$id=$this->input->post("id_jug");
+		$id=$this->input->post("id_jug_be");
 		if($this->jugador-->actualizar($id,$datosJugadoresEditado)){
 			redirect('equipos/index');
 		}else{

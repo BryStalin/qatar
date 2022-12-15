@@ -27,11 +27,11 @@ class Grupos extends CI_Controller {
 // formuario NUEVO
 public function guardarAsignatura(){
 	$datos=array(
-		"nombre"=>$this->input->post('nombre'),
-		"pais1"=>$this->input->post('pais1'),
-        "pais2"=>$this->input->post('pais2'),
-        "pais3"=>$this->input->post('pais3'),
-        "pais4"=>$this->input->post('pais4'),
+		"nombre_be"=>$this->input->post('nombre_be'),
+		"pais1_be"=>$this->input->post('pais1_be'),
+        "pais2_be"=>$this->input->post('pais2_be'),
+        "pais3_be"=>$this->input->post('pais3_be'),
+        "pais4_be"=>$this->input->post('pais4_be'),
 
 
 	);
@@ -44,9 +44,9 @@ public function guardarAsignatura(){
 	}
 
  }
- public function borrar($id_grupo){
+ public function borrar($id_grupo_be){
 
-	if ($this->grupo->eliminarPorId($id_grupo)) {
+	if ($this->grupo->eliminarPorId($id_grupo_be)) {
 		redirect('grupos/index');
 	} else {
 		echo "Error al eliminar";
@@ -64,14 +64,14 @@ public function guardarAsignatura(){
 
 	public function procesarActualizacion(){
 		$datosEstudianteEditado=array(
-		"nombre"=>$this->input->post('nombre'),
-		"pais1"=>$this->input->post('pais1'),
-        "pais2"=>$this->input->post('pais2'),
-        "pais3"=>$this->input->post('pais3'),
-        "pais4"=>$this->input->post('pais4'),
+		"nombre_be"=>$this->input->post('nombre_be'),
+		"pais1_be"=>$this->input->post('pais1_be'),
+        "pais2_be"=>$this->input->post('pais2_be'),
+        "pais3_be"=>$this->input->post('pais3_be'),
+        "pais4_be"=>$this->input->post('pais4_be'),
 
 		);
-		$id=$this->input->post("id_grupo");
+		$id=$this->input->post("id_grupo_be");
 		if($this->grupo->actualizar($id,$datosEstudianteEditado)){
 			redirect('grupos/index');
 		}else{
