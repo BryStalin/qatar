@@ -1,8 +1,9 @@
 <br><br><br>
 
+<footer>
 
-<div class="container-fluid">
-            <div class="row">
+    <div class="container-fluid">
+        <div class="row">
                         <div class="col-md-4 text-center" style="background-color: black;"> 
                     <center>
                         <h5 style="color: white;">POLÍTICA DE PRIVACIDAD</h5>
@@ -19,7 +20,7 @@
                         
                     <img src="<?php echo base_url(); ?>/assets/images/fifa3.png" alt="logo" >
                     </center>
-
+                    
                 </div>
                 <div class="col-md-4 text-center " style="background-color: black;">
                     <center>
@@ -27,8 +28,9 @@
                    
                     <h5 style="color: white;">Desarrollado: Brayan Doicela</h5>
                     </center>
-                        
-                 
+                    
+                    
+                </div>
             </div>
-    </div>
-</div>
+        </div>
+</footer>

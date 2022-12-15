@@ -17,15 +17,15 @@
         <form class="" action="<?php echo site_url('estadios/procesarActualizacion'); ?> " method="post">
           
           <center> 
-            <input type="hidden" name="id_est" value="<?php echo $estadioEditar->id_est;?>">
+            <input type="hidden" name="id_est_be" value="<?php echo $estadioEditar->id_est_be;?>">
           </center>
 
   <div class="row">
     <div class="col-md-4 text-right">
-      <label for="">NOMBRE</label>
+      <label for="">ESTADIO</label>
     </div>
     <div class="col-md-7">
-      <input type="text" name="nombre_est" value="<?php echo $estadioEditar->nombre_est;?>"class="form-control" placeholder="Ingrese el nombre del estadio" required>
+      <input type="text" name="nombre_est_be" value="<?php echo $estadioEditar->nombre_est_be;?>"class="form-control" placeholder="Ingrese el nombre del estadio" required>
     </div>
   </div>
   <br>
@@ -35,7 +35,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="number" name="capacidad_est" value="<?php echo $estadioEditar->capacidad_est;?>"class="form-control" placeholder="Ingrese capacidad del estadio" required>
+      <input type="number" name="capacidad_est_be" value="<?php echo $estadioEditar->capacidad_est_be;?>"class="form-control" placeholder="Ingrese capacidad del estadio" required>
     </div>
   </div>
   <br>

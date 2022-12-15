@@ -16,7 +16,7 @@
         <form class="" action="<?php echo site_url('grupos/procesarActualizacion'); ?> " method="post">
           
           <center> 
-            <input type="hidden" name="id_grupo" value="<?php echo $estudianteEditar->id_grupo;?>">
+            <input type="hidden" name="id_grupo_be" value="<?php echo $estudianteEditar->id_grupo_be;?>">
           </center>
 
           <div class="row">
@@ -24,7 +24,7 @@
       <label for="">GRUPO</label>
     </div>
     <div class="col-md-7">
-      <input type="text" name="nombre"  value="<?php echo $estudianteEditar->nombre;?>" class="form-control" placeholder="Ingrese el nombre del Hotel " required>
+      <input type="text" name="nombre_be"  value="<?php echo $estudianteEditar->nombre_be;?>" class="form-control" placeholder="Ingrese el nombre del Hotel " required>
     </div>
   </div>
   <br>
@@ -34,7 +34,7 @@
     <label for="">PAIS 1</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais1" value="<?php echo $estudianteEditar->pais1;?>" class="form-control" placeholder="Ingrese el Pais" requered>
+    <input type="text" name="pais1_be" value="<?php echo $estudianteEditar->pais1_be;?>" class="form-control" placeholder="Ingrese el Pais" requered>
   </div>
 </div>
 <br>
@@ -44,7 +44,7 @@
     <label for="">PAIS 2</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais2" value="<?php echo $estudianteEditar->pais2;?>" class="form-control" placeholder="Ingrese el Pais" requered>
+    <input type="text" name="pais2_be" value="<?php echo $estudianteEditar->pais2_be;?>" class="form-control" placeholder="Ingrese el Pais" requered>
   </div>
 </div>
 <br>
@@ -54,7 +54,7 @@
     <label for="">PAIS 3</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais3" value="<?php echo $estudianteEditar->pais3;?>" class="form-control" placeholder="Ingrese el Pais" requered>
+    <input type="text" name="pais3_be" value="<?php echo $estudianteEditar->pais3_be;?>" class="form-control" placeholder="Ingrese el Pais" requered>
   </div>
 </div>
 <br>
@@ -64,7 +64,7 @@
     <label for="">PAIS 4</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais4" value="<?php echo $estudianteEditar->pais4;?>" class="form-control" placeholder="Ingrese el Pais" requered>
+    <input type="text" name="pais4_be" value="<?php echo $estudianteEditar->pais4_be;?>" class="form-control" placeholder="Ingrese el Pais" requered>
   </div>
 </div>
 <br>

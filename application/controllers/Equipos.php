@@ -31,8 +31,8 @@ class Equipos extends CI_Controller {
 	//funcion para capturar los valores del formulario nuevo
 	public function guardarEquipos(){
 		$datosNuevoEquipo=array(
-			"nombre_equi" =>$this->input->post('nombre_equi'),
-			"confederacion_equi" =>$this->input->post('confederacion_equi'),
+			"nombre_equi_be" =>$this->input->post('nombre_equi_be'),
+			"confederacion_equi_be" =>$this->input->post('confederacion_equi_be'),
 			
 			
 			
@@ -46,10 +46,10 @@ class Equipos extends CI_Controller {
     	$config['allowed_types'] = 'jpg|png'; //tipo de archivos permitidos  'pdf|word'
 		$config['max_size'] = 2 * 1024; //tamano de la imagen 5mb
     	$this->upload->initialize($config);
-    	if ($this->upload->do_upload("imagen_equi")) {
+    	if ($this->upload->do_upload("imagen_equi_be")) {
 			//que se suba con exito
       	$dataSubida = $this->upload->data();
-		$datosNuevoEquipo["imagen_equi"] = $dataSubida['file_name'];
+		$datosNuevoEquipo["imagen_equi_be"] = $dataSubida['file_name'];
     }
 
 
@@ -63,9 +63,9 @@ class Equipos extends CI_Controller {
 		}
 	}
 	//funcion para eliminar estudiantes
-	public function borrar($id_equipos){
+	public function borrar($id_equipos_be){
 
-	if ($this->equipo->eliminarPorId($id_equipos)) {
+	if ($this->equipo->eliminarPorId($id_equipos_be)) {
 		redirect('equipos/index');
 	} else {
 		echo "Error al eliminar";
@@ -83,13 +83,13 @@ class Equipos extends CI_Controller {
 
 	public function procesarActualizacion(){
 		$datosEquiposEditado=array(
-			"nombre_equi" =>$this->input->post('nombre_equi'),
-			"confederacion_equi" =>$this->input->post('confederacion_equi'),
+			"nombre_equi_be" =>$this->input->post('nombre_equi_be'),
+			"confederacion_equi_be" =>$this->input->post('confederacion_equi_be'),
 			
 			
 		);
 
-		$id=$this->input->post("id_equipos");
+		$id=$this->input->post("id_equipos_be");
 		if($this->equipo->actualizar($id,$datosEquiposEditado)){
 			redirect('equipos/index');
 		}else{

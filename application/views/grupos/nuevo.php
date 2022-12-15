@@ -2,13 +2,13 @@
   <i class="glyphicon glyphicon-plus"></i>
 <b>Nuevo Grupo </b>
 </legend>
-<form class="" action="<?php echo site_url('grupos/guardarAsignatura'); ?> " method="post">
+<form id="fmr_nuevo_grupo" class="" action="<?php echo site_url('grupos/guardarAsignatura'); ?> " method="post">
   <div class="row">
     <div class="col-md-4 text-right" >
       <label for="">GRUPO</label>
     </div>
     <div class="col-md-7">
-      <input type="text" name="nombre"  value="" class="form-control" placeholder="Ingrese el nombre del grupo " required>
+      <input type="text" name="nombre_be"  value="" class="form-control" placeholder="Ingrese el nombre del grupo " required>
     </div>
   </div>
   <br>
@@ -18,7 +18,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais1" value="" class="form-control" placeholder="Ingrese el pais" requered>
+    <input type="text" name="pais1_be" value="" class="form-control" placeholder="Ingrese el pais" requered>
   </div>
 </div>
 <br>
@@ -28,7 +28,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais2" value="" class="form-control" placeholder="Ingrese el pais" requered>
+    <input type="text" name="pais2_be" value="" class="form-control" placeholder="Ingrese el pais" requered>
   </div>
 </div>
 <br>
@@ -38,7 +38,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais3" value="" class="form-control" placeholder="Ingrese el pais" requered>
+    <input type="text" name="pais3_be" value="" class="form-control" placeholder="Ingrese el pais" requered>
   </div>
 </div>
 <br>
@@ -47,7 +47,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais4" value="" class="form-control" placeholder="Ingrese el pais" requered>
+    <input type="text" name="pais4_be" value="" class="form-control" placeholder="Ingrese el pais" requered>
   </div>
 </div>
 <br>
@@ -67,4 +67,31 @@
       </div>
     </div>
 </form>
-</table>
+<script type="text/javascript">
+     $("#frm_nuevo_grupo").validate({
+        rules:{
+            nombre_be:{
+              required:true,
+              maxlength:1
+            },
+            
+            pais1_be:{
+              required:true,
+              minlength:3
+            },
+          
+        },
+        messages:{
+            nombre_be:{
+              required:"Ingrese Grupo ",
+              maxlength:"Nombre Incorrecto"
+            },
+         
+            pais1_be:{
+              required:"Por favor ingrese pais",
+              minlength:"Nombre Incorrect"
+            },
+           
+        },
+  });
+</script>

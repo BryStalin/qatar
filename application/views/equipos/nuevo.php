@@ -8,7 +8,7 @@
       <label for="">EQUIPO</label>
     </div>
     <div class="col-md-7">
-      <input type="text" id="nombre_equi" name="nombre_equi" value=""class="form-control" placeholder="Ingrese Equipo" >
+      <input type="text" id="nombre_equi_be" name="nombre_equi_be" value=""class="form-control" placeholder="Ingrese Equipo" >
     </div>
   </div>
   <br>
@@ -18,7 +18,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="text" id="confederacion_equi" name="confederacion_equi" value=""class="form-control" placeholder="Ingrese la confederacion" >
+      <input type="text" id="confederacion_equi_be" name="confederacion_equi_be" value=""class="form-control" placeholder="Ingrese la confederacion" >
     </div>
   </div>
   <br>
@@ -28,7 +28,7 @@
 
       </div>
       <div class="col-md-7">
-        <input type="file" id="imagen_equi" name="imagen_equi" value=""class="form-control" placeholder="Seleccione la fotografia" required accept="image/*">
+        <input type="file" id="imagen_equi_be" name="imagen_equi_be" value=""class="form-control" placeholder="Seleccione la fotografia" required accept="image/*">
       </div>
     </div>
 
@@ -56,24 +56,24 @@
 <script type="text/javascript">
      $("#frm_nuevo_equipo").validate({
         rules:{
-            nombre_equi:{
+            nombre_equi_be:{
               required:true,
               minlength:3
             },
             
-            confederacion_equi:{
+            confederacion_equi_be:{
               required:true,
               minlength:3
             },
           
         },
         messages:{
-            nombre_equi:{
+            nombre_equi_be:{
               required:"Por favor ingresse el equipo",
               minlength:"Equipo Incorrecto"
             },
          
-            confederacion_equi:{
+            confederacion_equi_be:{
               required:"Por favor ingrese la confederacion",
               minlength:"Confederacion incorrecta"
             },

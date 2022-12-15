@@ -15,7 +15,7 @@
         <form class="" action="<?php echo site_url('jugadores/procesarActualizacion'); ?> " method="post">
           
           <center> 
-            <input type="hidden" name="id_jug" value="<?php echo $jugadorEditar->id_jug;?>">
+            <input type="hidden" name="id_jug_be" value="<?php echo $jugadorEditar->id_jug_be;?>">
           </center>
 
   <div class="row">
@@ -23,7 +23,7 @@
       <label for="">NOMBRE</label>
     </div>
     <div class="col-md-7">
-      <input type="text" name="nombre_jug" value="<?php echo $jugaddrEditar->nombre_jug;?>"class="form-control" placeholder="Ingrese el nombre del jugador" required>
+      <input type="text" name="nombre_jug_be" value="<?php echo $jugaddrEditar->nombre_jug_be;?>"class="form-control" placeholder="Ingrese el nombre del jugador" required>
     </div>
   </div>
   <br>
@@ -33,7 +33,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="text" name="apellido_jug" value="<?php echo $jugadorEditar->apellido_jug;?>"class="form-control" placeholder="Ingrese el apellido del jugador" required>
+      <input type="text" name="apellido_jug_be" value="<?php echo $jugadorEditar->apellido_jug_be;?>"class="form-control" placeholder="Ingrese el apellido del jugador" required>
     </div>
   </div>
   <br>
@@ -43,7 +43,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="number" name="edad_jug" value="<?php echo $jugadorEditar->edad_jug;?>"class="form-control" placeholder="Ingrese la edad del jugador" required>
+      <input type="number" name="edad_jug_be" value="<?php echo $jugadorEditar->edad_jug_be;?>"class="form-control" placeholder="Ingrese la edad del jugador" required>
     </div>
   </div>
   <br>
@@ -53,7 +53,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="text" name="club_jug" value="<?php echo $jugadorEditar->club_jug;?>"class="form-control" placeholder="Ingrese el club del jugador" required>
+      <input type="text" name="club_jug_be" value="<?php echo $jugadorEditar->club_jug_be;?>"class="form-control" placeholder="Ingrese el club del jugador" required>
     </div>
   </div>
   <br>
@@ -63,7 +63,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="text" name="posicion_jug" value="<?php echo $jugadorEditar->posicion_jug;?>"class="form-control" placeholder="Ingrese la posicion del jugador" required>
+      <input type="text" name="posicion_jug_be" value="<?php echo $jugadorEditar->posicion_jug_be;?>"class="form-control" placeholder="Ingrese la posicion del jugador" required>
     </div>
   </div>
   <br>
@@ -73,7 +73,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="number" name="numero_jug" value="<?php echo $jugadorEditar->numero_jug;?>"class="form-control" placeholder="Ingrese el numero del jugador" required>
+      <input type="number" name="numero_jug_be" value="<?php echo $jugadorEditar->numero_jug_be;?>"class="form-control" placeholder="Ingrese el numero del jugador" required>
     </div>
   </div>
   <br>

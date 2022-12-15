@@ -15,7 +15,7 @@
         <form class="" action="<?php echo site_url('equipos/procesarActualizacion'); ?> " method="post">
           
           <center> 
-            <input type="hidden" name="id_equipos" value="<?php echo $equipoEditar->id_equipos;?>">
+            <input type="hidden" name="id_equipos_be" value="<?php echo $equipoEditar->id_equipos_be;?>">
           </center>
 
   <div class="row">
@@ -23,7 +23,7 @@
       <label for="">EQUIPO</label>
     </div>
     <div class="col-md-7">
-      <input type="text" name="nombre_equi" value="<?php echo $equipoEditar->nombre_equi;?>"class="form-control" placeholder="Ingrese el nombre del equipo" required>
+      <input type="text" name="nombre_equi_be" value="<?php echo $equipoEditar->nombre_equi_be;?>"class="form-control" placeholder="Ingrese el nombre del equipo" required>
     </div>
   </div>
   <br>
@@ -33,7 +33,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="text" name="confederacion_equi" value="<?php echo $equipoEditar->confederacion_equi;?>"class="form-control" placeholder="Ingrese la confederacion" required>
+      <input type="text" name="confederacion_equi_be" value="<?php echo $equipoEditar->confederacion_equi_be;?>"class="form-control" placeholder="Ingrese la confederacion" required>
     </div>
   </div>
   <br>

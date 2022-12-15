@@ -25,14 +25,14 @@ class Estadio extends CI_Model
 
     //funcion para eliminar u equipos 
     public function eliminarPorId($id){
-      $this->db->where("id_est" ,$id);
+      $this->db->where("id_est_be" ,$id);
       return $this->db->delete("estadios");
 
     }
  
     //consultando equipo por su id
     public function obtenerPorId($id){
-      $this->db->where("id_est",$id);
+      $this->db->where("id_est_be",$id);
       $jugador=$this->db->get("estadios");
     if($jugador->num_rows()>0){
       return $jugador->row();   //porque vuelve 1 equipo se utiliza row
@@ -42,7 +42,7 @@ class Estadio extends CI_Model
     }
     //proceso de actualizacionnd equipos
     public function actualizar($id,$datos){
-      $this->db->where("id_est",$id);
+      $this->db->where("id_est_be",$id);
       return $this->db->update("estadios",$datos);
 
     }

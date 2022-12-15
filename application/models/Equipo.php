@@ -23,14 +23,14 @@ class Equipo extends CI_Model
 
     //funcion para eliminar u equipos 
     public function eliminarPorId($id){
-      $this->db->where("id_equipos" ,$id);
+      $this->db->where("id_equipos_be" ,$id);
       return $this->db->delete("equipos");
 
     }
  
     //consultando equipo por su id
     public function obtenerPorId($id){
-      $this->db->where("id_equipos",$id);
+      $this->db->where("id_equipos_be",$id);
       $equipo=$this->db->get("equipos");
     if($equipo->num_rows()>0){
       return $equipo->row();   //porque vuelve 1 equipo se utiliza row
@@ -40,7 +40,7 @@ class Equipo extends CI_Model
     }
     //proceso de actualizacionnd equipos
     public function actualizar($id,$datos){
-      $this->db->where("id_equipos",$id);
+      $this->db->where("id_equipos_be",$id);
       return $this->db->update("equipos",$datos);
 
     }

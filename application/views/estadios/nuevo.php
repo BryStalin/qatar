@@ -8,10 +8,10 @@
 <form id="frm_nuevo_estadio" class="" enctype="multipart/form-data" action="<?php echo site_url('estadios/guardarEstadios'); ?> " method="post">
   <div class="row">
     <div class="col-md-4 text-right">
-      <label for="">NOMBRE</label>
+      <label for="">ESTADIO</label>
     </div>
     <div class="col-md-7">
-      <input type="text" id="nombre_est" name="nombre_est" value=""class="form-control" placeholder="Ingrese del estadio" >
+      <input type="text" id="nombre_est_be" name="nombre_est_be" value=""class="form-control" placeholder="Ingrese del estadio" >
     </div>
   </div>
   <br>
@@ -21,7 +21,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="number" id="capacidad_est" name="capacidad_est" value=""class="form-control" placeholder="Ingrese capacidad de estadio" >
+      <input type="number" id="capacidad_est_be" name="capacidad_est_be" value=""class="form-control" placeholder="Ingrese capacidad de estadio" >
     </div>
   </div>
   <br>
@@ -34,7 +34,7 @@
 
       </div>
       <div class="col-md-7">
-        <input type="file" id="foto_jug" name="foto_jug" value=""class="form-control" placeholder="Seleccione la fotografia" required accept="image/*">
+        <input type="file" id="foto_jug_be" name="foto_jug_be" value=""class="form-control" placeholder="Seleccione la fotografia" required accept="image/*">
       </div>
     </div>
 
@@ -62,25 +62,25 @@
 <script type="text/javascript">
      $("#frm_nuevo_estadio").validate({
         rules:{
-            nombre_est:{
+            nombre_est_be:{
               required:true,
               minlength:3
             },
             
-            capcidad_est:{
+            capcidad_est_be:{
               required:true,
               minlength:3
             },
           
         },
         messages:{
-            nombre_est:{
+            nombre_est_be:{
               required:"Por favor ingrese el estadio",
               minlength:"Nombre Incorrecto"
             },
          
-            capacidad_est:{
-              required:"Por favor ingrese la capacidad",
+            capacidad_est_be:{
+              required:"Por favor ingrese la capaci_bedad",
               minlength:"Capacidad incorrecta"
             },
            
