@@ -23,14 +23,14 @@ class Grupo extends CI_Model
 
     //funcion para eliminar un estudiante
     public function eliminarPorId($id){
-      $this->db->where("id_grupo" ,$id);
+      $this->db->where("id_grupo_be" ,$id);
       return $this->db->delete("grupos");
 
     }
 
     //consultando estudiante por su id
     public function obtenerPorId($id){
-      $this->db->where("id_grupo",$id);
+      $this->db->where("id_grupo_be",$id);
       $estudiante=$this->db->get("grupos");
     if($estudiante->num_rows()>0){
       return $estudiante->row();   //porque vuelve 1 estudiante se utiliza row
@@ -40,7 +40,7 @@ class Grupo extends CI_Model
     }
     //proceso de actualizacionnd eestudiante
     public function actualizar($id,$datos){
-      $this->db->where("id_grupo",$id);
+      $this->db->where("id_grupo_be",$id);
       return $this->db->update("grupos",$datos);
 
     }
