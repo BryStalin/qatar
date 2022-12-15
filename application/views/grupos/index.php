@@ -29,33 +29,33 @@ AGREGAR NUEVO
       <?php foreach($listadoHoteles->result() as $hotelTemporal):?>
             <tr>
                 <td class="text-center">
-                    <?php echo $hotelTemporal->id_grupo; ?>
+                    <?php echo $hotelTemporal->id_grupo_be; ?>
                 </td>
                 <td class="text-center">
-                    <?php echo $hotelTemporal->nombre; ?>
+                    <?php echo $hotelTemporal->nombre_be; ?>
                 </td>
                 <td class="text-center">
-                    <?php echo $hotelTemporal->pais1; ?>
+                    <?php echo $hotelTemporal->pais1_be; ?>
                 </td>
                 <td class="text-center">
-                    <?php echo $hotelTemporal->pais2; ?>
+                    <?php echo $hotelTemporal->pais2_be; ?>
                 </td>
                 <td class="text-center">
-                    <?php echo $hotelTemporal->pais3; ?>
+                    <?php echo $hotelTemporal->pais3_be; ?>
                 </td>
                 <td class="text-center">
-                    <?php echo $hotelTemporal->pais4; ?>
+                    <?php echo $hotelTemporal->pais4_be; ?>
                 </td>
 
 
 
 
                 <td class="text-center">
-                    <a href="<?php echo site_url('grupos/actualizar')?>/<?php echo $hotelTemporal->id_grupo; ?>" class="btn btn-warning">
+                    <a href="<?php echo site_url('grupos/actualizar')?>/<?php echo $hotelTemporal->id_grupo_be; ?>" class="btn btn-warning">
                         <i class="glyphicon glyphicon-edit"></i>
                         Editar
                     </a>
-                    <a href="<?php echo site_url('grupos/borrar')?>/<?php echo $hotelTemporal->id_grupo; ?>" class="btn btn-danger">
+                    <a href="<?php echo site_url('grupos/borrar')?>/<?php echo $hotelTemporal->id_grupo_be; ?>" class="btn btn-danger">
                         <i class="glyphicon glyphicon-trash"></i>
                         Eliminar
                     </a>
