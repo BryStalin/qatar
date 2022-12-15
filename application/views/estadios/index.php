@@ -1,4 +1,4 @@
-
+_be
 <legend class="text-center">
     <i class="glyphicon glyphicon-check"> </i>
     <b>Gestion Estadios</b>
@@ -31,19 +31,19 @@
         <?php foreach($listadoEstadios->result() as $estadioTemporal):?>
             <tr>
                 <td class="text-center">
-                    <?php echo $estadioTemporal->id_est; ?>
+                    <?php echo $estadioTemporal->id_est_be; ?>
                 </td>
                 <td class="text-center">
-                    <?php echo $estadioTemporal->nombre_est; ?>
+                    <?php echo $estadioTemporal->nombre_est_be; ?>
                 </td>
                 <td class="text-center">
-                    <?php echo $estadioTemporal->capacidad_est; ?>
+                    <?php echo $estadioTemporal->capacidad_est_be; ?>
                 </td>
                 <td>
-                <?php if ($estadioTemporal->foto_jug!=""): ?>
-                    <a href="<?php echo base_url('uploads/equipos').'/'.$estadioTemporal->foto_jug; ?>"
+                <?php if ($estadioTemporal->foto_jug_be!=""): ?>
+                    <a href="<?php echo base_url('uploads/equipos').'/'.$estadioTemporal->foto_jug_be; ?>"
                       target="_blank">
-                      <img src="<?php echo base_url('uploads/equipos').'/'.$estadioTemporal->foto_jug; ?>"
+                      <img src="<?php echo base_url('uploads/equipos').'/'.$estadioTemporal->foto_jug_be; ?>"
                       width="50px" height="50px"
                       alt="">
                     </a>
@@ -52,11 +52,11 @@
                   <?php endif; ?>
                 </td>
                 <td class="text-center">
-                    <a href="<?php echo site_url('estadios/actualizar')?>/<?php echo $estadioTemporal->id_est; ?>" class="btn btn-warning">
+                    <a href="<?php echo site_url('estadios/actualizar')?>/<?php echo $estadioTemporal->id_est_be; ?>" class="btn btn-warning">
                         <i class="glyphicon glyphicon-edit"></i>
                         Editar
                     </a>
-                    <a href="<?php echo site_url('estadios/borrar')?>/<?php echo $estadioTemporal->id_est; ?>" class="btn btn-danger" onclick="return confirm ('Estas seguro de que quieres eliminar')">
+                    <a href="<?php echo site_url('estadios/borrar')?>/<?php echo $estadioTemporal->id_est_be; ?>" class="btn btn-danger" onclick="return confirm ('Estas seguro de que quieres eliminar')">
                         <i class="glyphicon glyphicon-trash"></i>
                         Eliminar
                     </a>

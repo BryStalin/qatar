@@ -8,7 +8,7 @@
       <label for="">NOMBRE</label>
     </div>
     <div class="col-md-7">
-      <input type="text" id="nombre_est" name="nombre_est" value=""class="form-control" placeholder="Ingrese nombre" >
+      <input type="text" id="nombre_est_be" name="nombre_est_be" value=""class="form-control" placeholder="Ingrese nombre" >
     </div>
   </div>
   <br>
@@ -18,7 +18,7 @@
 
     </div>
     <div class="col-md-7">
-      <input type="number" id="capacidad_est" name="capacidad_est" value=""class="form-control" placeholder="Ingrese la capacidad" >
+      <input type="number" id="capacidad_est_be" name="capacidad_est_be" value=""class="form-control" placeholder="Ingrese la capacidad" >
     </div>
   </div>
   <br>
@@ -28,7 +28,7 @@
 
       </div>
       <div class="col-md-7">
-        <input type="file" id="foto_jug" name="foto_jug" value=""class="form-control" placeholder="Seleccione la fotografia" required accept="image/*">
+        <input type="file" id="foto_jug_be" name="foto_jug_be" value=""class="form-control" placeholder="Seleccione la fotografia" required accept="image/*">
       </div>
     </div>
 
