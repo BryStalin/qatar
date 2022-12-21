@@ -118,6 +118,11 @@
               required:true,
               minlength:3
             },
+            numero_jug_be:{
+              required:true,
+              minlength:3
+            },
+          
           
         },
         messages:{
@@ -142,6 +147,11 @@
               required:"Por favor ingrese posiscion",
               minlength:"Posicion incorrecta"
             },
+            numero_jug_be:{
+              required:"Por favor ingrese el numero",
+              minlength:"Posicion incorrecta"
+            },
+           
            
         },
   });

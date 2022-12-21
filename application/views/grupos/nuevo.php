@@ -8,7 +8,7 @@
       <label for="">GRUPO</label>
     </div>
     <div class="col-md-7">
-      <input type="text" name="nombre_be" id="nombre_be" value="" class="form-control" placeholder="Ingrese el nombre del grupo " >
+      <input type="text" name="nombre_be" id="nombre_be" value="" class="form-control" placeholder="Ingrese el nombre del grupo " required>
     </div>
   </div>
   <br>
@@ -18,7 +18,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais1_be" id="pais1_be" value="" class="form-control" placeholder="Ingrese el pais" >
+    <input type="text" name="pais1_be" id="pais1_be" value="" class="form-control" placeholder="Ingrese el pais" required >
   </div>
 </div>
 <br>
@@ -28,7 +28,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais2_be" id="pais2_be" value="" class="form-control" placeholder="Ingrese el pais" >
+    <input type="text" name="pais2_be" id="pais2_be" value="" class="form-control" placeholder="Ingrese el pais" required >
   </div>
 </div>
 <br>
@@ -38,7 +38,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais3_be"  id="pais3_be" value="" class="form-control" placeholder="Ingrese el pais" >
+    <input type="text" name="pais3_be"  id="pais3_be" value="" class="form-control" placeholder="Ingrese el pais" required >
   </div>
 </div>
 <br>
@@ -47,7 +47,7 @@
     <label for="">PAIS</label>
   </div>
   <div class="col-md-7">
-    <input type="text" name="pais4_be" id="pais4_be" value="" class="form-control" placeholder="Ingrese el pais" >
+    <input type="text" name="pais4_be" id="pais4_be" value="" class="form-control" placeholder="Ingrese el pais" required >
   </div>
 </div>
 <br>

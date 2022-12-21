@@ -67,7 +67,7 @@
               minlength:3
             },
             
-            capcidad_est_be:{
+            capacidad_est_be:{
               required:true,
               minlength:3
             },
@@ -80,7 +80,7 @@
             },
          
             capacidad_est_be:{
-              required:"Por favor ingrese la capaci_bedad",
+              required:"Por favor ingrese la capacidad",
               minlength:"Capacidad incorrecta"
             },
            
